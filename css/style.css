@@ -12,7 +12,7 @@ body {
   min-height: 100vh;
 }
 
-/* Login */
+/* Registro */
 
 [data-tipo="registro"] .conteudo {
   display: grid;
