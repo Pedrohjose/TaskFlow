@@ -14,6 +14,12 @@ body {
 
 /* Início */
 
+[data-page="index"] {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .index-section {
   padding: 1rem;
   background: linear-gradient(170deg, rgb(203, 227, 241) 60%, transparent 50%),
@@ -29,7 +35,7 @@ body {
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 90vh;
     background: linear-gradient(110deg, rgb(203, 227, 241) 60%, transparent 50%),
       url(../img/index/teamwork.webp);
     background-position: center;
@@ -78,9 +84,6 @@ body {
 
 .index-group h2 span {
   display: flex;
-}
-
-.index-group span {
   color: rgb(37, 162, 235);
 }
 
@@ -111,6 +114,27 @@ body {
 
 .index-group a:hover {
   background-color: rgb(0, 26, 92);
+}
+
+.content-section {
+  margin: 0 auto;
+  padding: 2rem;
+  width: 60%;
+}
+
+.content-section h3 {
+  font-size: 1.6rem;
+  color: rgb(37, 162, 235);
+}
+
+.content-section h3 span {
+  display: flex;
+  color: rgb(0, 44, 155);
+}
+
+.functionality-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* Registro */
