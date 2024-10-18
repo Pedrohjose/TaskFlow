@@ -1,6 +1,7 @@
 /* Global */
 
 * {
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,148 +10,258 @@
 
 body {
   display: flex;
-  min-height: 100vh;
-  flex-direction: row;
-}
-
-[data-page="index"] {
-  display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 /* Início */
 
-.index-section {
+.hero {
+  overflow: hidden;
+  display: flex;
   position: relative;
-  height: 100%;
-  padding: 1rem;
-  background: linear-gradient(170deg, rgb(203, 227, 241) 60%, transparent 50%),
-    url(../img/index/teamwork.webp);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  min-height: 600px;
+  background: linear-gradient(
+    to right,
+    rgb(232, 244, 255) 50%,
+    rgb(255, 255, 255) 50%
+  );
 }
 
-@media screen and (min-width: 1024px) {
-  .index-section {
-    height: 50vh;
-    background: linear-gradient(110deg, rgb(203, 227, 241) 60%, transparent 50%),
-      url(../img/index/teamwork.webp);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-
-.index-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15px;
-  margin: 0 auto;
-  padding-bottom: 10rem;
-  width: 100%;
-  height: 100%;
-}
-
-@media screen and (min-width: 1024px) {
-  .index-group {
-    position: absolute;
-    left: 10%;
-    gap: 50px;
-    width: 40%;
-  }
-}
-
-.index-group h1 {
-  font-size: 1rem;
-  color: rgb(0, 44, 155);
-}
-
-@media screen and (min-width: 1024px) {
-  .index-section h1 {
-    font-size: 2rem;
-  }
-}
-
-.index-group h2 {
-  font-size: 1.5rem;
-  color: rgb(0, 44, 155);
-}
-
-@media screen and (min-width: 1024px) {
-  .index-section h2 {
-    font-size: 3rem;
-  }
-}
-
-.index-group h2 span {
-  display: flex;
-  color: rgb(37, 162, 235);
-}
-
-.index-group p {
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: rgb(75, 85, 99);
-}
-
-@media screen and (min-width: 1024px) {
-  .index-section p {
-    font-size: 1rem;
-  }
-}
-
-.index-link {
-  margin-bottom: 1.5rem;
-  width: fit-content;
-  padding: 0.7rem 2rem;
-  border: none;
-  border-radius: 2rem;
-  background-color: rgb(0, 44, 155);
-  text-decoration: none;
-  font-weight: 500;
-  color: rgb(255, 255, 255);
-  transition: background-color 0.3s ease;
-}
-
-@media screen and (min-width: 1024px) {
-  .index-link {
-    padding: 0.7rem 2rem;
-  }
-}
-
-.index-link:hover {
-  background-color: rgb(0, 26, 92);
-}
-
-.content-section {
+.hero-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  margin: 0 auto;
-  padding: 2rem;
-  width: 60%;
-}
-
-.content-section h3 {
+  width: 50%;
+  padding: 80px 40px;
   text-align: center;
-  font-size: 2.5rem;
-  color: rgb(37, 162, 235);
 }
 
-.content-section h3 span {
+.logo {
+  margin-bottom: 40px;
+  width: 120px;
+}
+
+.hero-title {
+  margin-bottom: 16px;
+  font-size: 48px;
+  color: rgb(0, 38, 132);
+}
+
+.hero-subtitle {
+  font-size: 48px;
+  color: rgb(15, 82, 186);
+  margin-bottom: 24px;
+}
+
+.hero-description {
+  margin-bottom: 32px;
+  max-width: 500px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgb(102, 102, 102);
+}
+
+.hero-image {
+  width: 50%;
+  background-image: url("/img/index/teamwork.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.signup-link {
+  display: inline-block;
+  max-width: 200px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  background-color: rgb(0, 38, 132);
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  transition: background-color 0.3s ease;
+}
+
+.signup-link:hover {
+  background-color: rgb(0, 28, 100);
+}
+
+.service-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: rgb(255, 255, 255);
+}
+
+.service-title {
+  margin-bottom: 8px;
+  font-size: 32px;
+  color: rgb(15, 82, 186);
+}
+
+.service-subtitle {
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(0, 38, 132);
+}
+
+.service-description {
+  margin: 0 auto 32px;
+  max-width: 600px;
+  line-height: 1.6;
+  color: rgb(102, 102, 102);
+}
+
+.features-section {
   display: flex;
+  gap: 40px;
   justify-content: center;
-  color: rgb(0, 44, 155);
+  margin-top: 60px;
+  padding: 0 20px;
 }
 
-.functionality-group {
+.feature {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+
+.feature img {
+  margin-bottom: 16px;
+  width: 48px;
+  height: 48px;
+}
+
+.feature-text {
+  text-align: center;
+  font-size: 14px;
+  color: rgb(102, 102, 102);
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.members-section {
+  padding: 60px 20px;
+  background-color: rgb(0, 179, 227);
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.members-title {
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.members-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin: 0 auto 40px;
+  max-width: 1200px;
+}
+
+.member {
+  flex: 1;
+  max-width: 250px;
+}
+
+.member-photo {
+  margin: 0 auto 16px;
+  width: 48px;
+  height: 48px;
+}
+
+.member-title {
+  font-size: 20px;
+}
+
+.member-subtitle {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.values-section {
+  padding: 60px 20px;
+  background: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.values-title {
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: rgb(0, 38, 132);
+}
+
+.values-description {
+  margin-bottom: 24px;
+  color: rgb(102, 102, 102);
+}
+
+footer {
+  padding: 60px 20px 40px;
+  background-color: rgb(0, 38, 132);
+  text-align: center;
+  color: white;
+}
+
+.footer-slogan {
+  margin-bottom: 40px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.footer-links {
+  margin-bottom: 24px;
+}
+
+.footer-links a {
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+}
+
+.copyright {
+  font-size: 12px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    background: rgb(232, 244, 255);
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .hero-title,
+  .hero-subtitle {
+    font-size: 36px;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .features-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .members-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* Registro */
@@ -158,10 +269,11 @@ body {
 .main-content {
   display: block;
   width: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 
-@media screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .main-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -184,7 +296,7 @@ body {
   font-weight: bold;
 }
 
-@media screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .register-section h1 {
     text-align: left;
   }
@@ -335,7 +447,7 @@ body {
   display: none;
 }
 
-@media screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .slides-section {
     display: flex;
     flex-direction: column;
@@ -396,20 +508,20 @@ p {
 /* Sistema */
 
 :root {
-  --bg:#ebf0f7;
-  --header:#fbf4f6;
-  --text:#2e2e2f;
-  --white:#ffffff;
-  --light-grey:#c4cad3; 
-  --tag-1:#ceecfd;
-  --tag-1-text:#2e87ba;
-  --tag-2:#d6ede2;
-  --tag-2-text:#13854e;
-  --tag-3:#ceecfd;
-  --tag-3-text:#2d86ba;
-  --tag-4:#f2dcf5;
-  --tag-4-text:#a734ba;
-  --purple:#7784ee;
+  --bg: #ebf0f7;
+  --header: #fbf4f6;
+  --text: #2e2e2f;
+  --white: #ffffff;
+  --light-grey: #c4cad3;
+  --tag-1: #ceecfd;
+  --tag-1-text: #2e87ba;
+  --tag-2: #d6ede2;
+  --tag-2-text: #13854e;
+  --tag-3: #ceecfd;
+  --tag-3-text: #2d86ba;
+  --tag-4: #f2dcf5;
+  --tag-4-text: #a734ba;
+  --purple: #7784ee;
 }
 
 .app {
@@ -449,7 +561,7 @@ h1 {
   display: inline-block;
   background: var(--purple);
   border-radius: 100rem;
-  margin: 0 .2rem;
+  margin: 0 0.2rem;
 }
 
 .project-participants__add {
@@ -461,7 +573,7 @@ h1 {
 }
 
 .project-participants__add:after {
-  content: '+';
+  content: "+";
   font-size: 15px;
   color: rgb(150, 150, 150);
 }
@@ -505,7 +617,7 @@ h1 {
 
 .task:hover {
   box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
-  border-color: rgba(162, 179, 207, .2) !important;
+  border-color: rgba(162, 179, 207, 0.2) !important;
 }
 
 .task p {
